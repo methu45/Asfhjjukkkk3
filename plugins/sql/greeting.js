@@ -1,4 +1,4 @@
-const config = require('../../dbfile');
+const config = require('../../config');
 const { DataTypes } = require('sequelize');
 const GreetingsDB = config.DATABASE.define('Greeting', {
     chat: {
