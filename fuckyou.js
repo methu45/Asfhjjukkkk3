@@ -90,7 +90,7 @@ async function DIANASTT() {
 try{
 console.log("12345")
 await config.DATABASE.sync();
-console.log("000000)
+console.log("000000")
 }catch(err){
 console.log("6666")
 }
