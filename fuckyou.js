@@ -87,7 +87,13 @@ async function DIANASTT() {
 
  
 
-
+try{
+console.log("12345")
+await config.DATABASE.sync();
+console.log("000000)
+}catch(err){
+console.log("6666")
+}
 
 
         console.log(chalk.green.bold('𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰 𝚆𝙰 𝙱𝙾𝚃 𝚁𝚄𝙽𝙽𝙸𝙽𝙶🥲...'));
