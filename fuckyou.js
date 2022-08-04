@@ -22,7 +22,23 @@ const Language = require('./language');
 const Lang = Language.getString('updater');
 
 
+try{
+console.log("trying to dbbbbbb")
 
+const LUSIFARDB = config.DATABASE.define('LUSIFAR', {
+    info: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    value: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    }
+});
+console.log("✅")
+}catch(e){
+console.log(e)
+}
 
     
 fs.readdirSync('./plugins/sql/').forEach(plugin => {
