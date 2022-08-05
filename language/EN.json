@@ -1,10 +1,10 @@
 { 
-    "__DIANAJSON__": true,
+    "__AXZYJSON__": true,
     "LANGUAGE": "English",
     "LANGCODE": "en",
     "AUTHOR": "©Axzi-X Dev",
     "STRINGS": {
-        "_QUEEN_DIANA": {
+        "_AXZY_": {
             "COMMAND": "Command",
             "DESC": "Description",
             "EXAMPLE": "Example",
