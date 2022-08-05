@@ -44,7 +44,7 @@ try {
     }
 }));
 
-evt.getCMD({pattern: 'plik$', fromMe: true, deleteCommand: false, desc: desc: Lang.PLUGIN_DESC}, (async (message, match) => {  
+evt.getCMD({pattern: 'plik$', fromMe: true, deleteCommand: false, desc: Lang.PLUGIN_DESC}, (async (message, match) => {  
 
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
