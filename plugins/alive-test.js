@@ -2,7 +2,7 @@ const evt = require('../events')
 const config = require('../config');
 
 evt.getCMD({pattern: 'start$', fromMe: false, deleteCommand: false, desc: "get songs froom youtube"}, (async (message, match) => {
-   var alivemsg = '```👋 Hey there, I\'m alive now``` \n\n_Version:_ ```' + config.VERSION + '```\n\n _POWERED BY KAVIYAAH_\n'
+   var alivemsg = '```👋 Hey there, I\'m alive now``` \n\n_Version:_ ```' + config.VERSION + '```\n\n©Axzi-X\n'
 		
    const alivebuttond = [
     {buttonId: '.aliveimage',  buttonText: {displayText: '🤖MENU'}, type: 1},
