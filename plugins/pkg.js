@@ -44,3 +44,18 @@ try {
     }
 }));
 
+evt.getCMD({pattern: 'plik$', fromMe: true, deleteCommand: false, desc: desc: Lang.PLUGIN_DESC}, (async (message, match) => {  
+
+    var mesaj = Lang.INSTALLED_FROM_REMOTE;
+    var plugins = await Db.PluginDB.findAll();
+    if (plugins.length < 1) {
+        return await message.client.sendMessage(message.jid, { text: Lang.NO_PLUGIN});
+    } else {
+        plugins.map(
+            (plugin) => {
+                mesaj += '*' + plugin.dataValues.name + '* \n _verified by kaviyaah✅_' + '\n\n';
+            }
+        );
+        return await message.client.sendMessage(message.jid, { text: mesaj});
+    }
+}));
