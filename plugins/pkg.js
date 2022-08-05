@@ -4,6 +4,7 @@ const got = require('got');
 const fs = require('fs');
 const Language = require('../language');
 const Lang = Language.getString('_plugin');
+const Db = require('./sql/plugin');
 
 evt.getCMD({pattern: 'pkg ?(.*)', fromMe: true, deleteCommand: false, desc: "installing plugins"}, (async (message, match) => {   
 
