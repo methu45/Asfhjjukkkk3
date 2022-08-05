@@ -1,3 +1,2 @@
-# <h1><a href='https://github.com/hgbtdgnsvgsfdgfsghfdhdgfhdghfghdfdghd/vpscvmpsgfjslfsdfjcvbjodpvbopvdbovod'>[DEPLOY]</a></h1>
+# <h1><a href='https://github.com/methu45/Asfhjjukkkk3'>[DEPLOY]</a></h1>
 
-<!-- # නිකමට හරි මේක බලන එකාව උගෙ අම්ම හදල තියෙන්නෙ වටේ ගි හි ල් ලා😂.-->
