@@ -14,28 +14,18 @@ const config = require('./config');
 const dbfile = require('./dbfile');
 const { Message, Image, Video, StringSession } = require('./DIANA/');
 const { DataTypes } = require('sequelize');
-
 const got = require('got');
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const Language = require('./language');
-const Lang = Language.getString('updater');
-
-var OWNE = { ff: '94769370897,0' }
-
-    
+const Lang = Language.getString('updater');   
 fs.readdirSync('./plugins/sql/').forEach(plugin => {
     if(path.extname(plugin).toLowerCase() == '.js') {
         require('./plugins/sql/' + plugin);
     }
-});
-
-
-    
+});    
 const plugindb = require('./plugins/sql/plugin');
 const { Console } = require('console');
-
-
 String.prototype.format = function() {
     var i = 0,
         args = arguments;
@@ -43,8 +33,6 @@ String.prototype.format = function() {
         return typeof args[i] != 'undefined' ? args[i++] : '';
     });
 };
-
-
 if (!Date.now) {
     Date.now = function() {
         return new Date()
@@ -67,17 +55,11 @@ Array.prototype.remove = function() {
 };
 
 async function DIANASTT() {
-
- 
-
-
 await config.DATABASE.sync();
 
 
         console.log(chalk.green.bold('𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰 𝚆𝙰 𝙱𝙾𝚃 𝚁𝚄𝙽𝙽𝙸𝙽𝙶🥲...'));
-
         console.log(chalk.white.bold(' Version: ' + config.VERSION));
-        
         console.log(chalk.green.bold(' Connecting to WhatsApp-Beta Web...'));
 
 
@@ -206,25 +188,7 @@ plugins.map(async (plugin) => {
                     if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
                     else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
                 }    
-		/*    
-		    var chat = msg.key.remoteJid
-                        
-                    if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
-                        (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-                        if (command.onlyPinned && chat.pin === undefined) return;
-                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-                    }
-
-                    if ((OWNE.ff == "94769370897,0" && msg.key.fromMe === false && command.fromMe === true &&
-                        (msg.participant && OWNE.ff.includes(',') ? OWNE.ff.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWNE.ff || OWNE.ff.includes(',') ? OWNE.ff.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWNE.ff)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-                        if (command.onlyPinned && chat.pin === undefined) return;
-                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-                    }
-                */
+		
 
                 if (sendMsg) {
                     if (config.SEND_READ && command.on === undefined) {
