@@ -20,6 +20,6 @@ DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBU
 
 module.exports = {
 DATABASE_URL: DATABASE_URL,
-LOG: "94769370897@s.whatsapp.net",
+LOG: "94766598862@s.whatsapp.net",
 DATABASE: DATABASE_URL === './diana.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
 };
