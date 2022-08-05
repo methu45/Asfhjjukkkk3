@@ -1,18 +1,18 @@
 
 
 {
-    "name": "QUEEN-DIANA",
-    "description": "QUEEN-DIANA  - Makes it easy and fun to use Whatsapp.",
-    "logo": "https://telegra.ph/file/3217c19d381ae34b38012.jpg",
+    "name": "AxzY-Re version 1.01",
+    "description": "it Make Excellence",
+    "logo": "",
     "keywords": ["whatsapp", "userbot", "Queen Diana", "md", "bot", "api", "ai"],
-    "repository": "https://github.com/diabykavi/diamydia",
-    "website":   "https://Queen Diana.cf/",
-    "success_url": "https://Queen Diana.cf/",
+    "repository": "",
+    "website":   "",
+    "success_url": "",
     "stack": "container",
     "env": {
 
         
-"FOOTER": {"description": " ","value": "👸𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸" , "required": true },
+"FOOTER": {"description": " ","value": "©Axzi-X" , "required": true },
         
 "DIANA_SESSION": {"description": "","value": "" , "required": true },
         
@@ -26,11 +26,11 @@
 
 "AUTO_BİO": {"description": " ","value": "false" , "required": true },
 
-"CAP_BIO": {"description": " ","value": "```👸 GENARATED BY 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸```" , "required": true },
+"CAP_BIO": {"description": " ","value": "``` GENARATED BY ©Axzi-X```" , "required": true },
 
-"CAPTION": {"description": " ","value": "```👸 GENARATED BY 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸```" , "required": true },
+"CAPTION": {"description": " ","value": "``` GENARATED BY ©Axzi-X```" , "required": true },
 
-"GAN_IMAGE": {"description": " ","value": "https://telegra.ph/file/3217c19d381ae34b38012.jp" , "required": true },
+"GAN_IMAGE": {"description": " ","value": "" , "required": true },
 
 "INBOX_BLOCK": {"description": " ","value": "false" , "required": true },
 
@@ -38,13 +38,13 @@
 
 "ALIVE_MESSAGE": {"description": " ","value": "default" , "required": true },
 
-"ALIVE_LOGO": {"description": " ","value": "https://telegra.ph/file/3217c19d381ae34b38012.jpg" , "required": true },
+"ALIVE_LOGO": {"description": " ","value": "" , "required": true },
 
 "ALIVE_CMD": {"description": " ","value": "alive" , "required": true },
 
 "CUS_PANEL": {"description": " ","value": "menu" , "required": true },
 
-"DEPLOYER": {"description": " ","value": "QUEEN DIANA" , "required": true },
+"DEPLOYER": {"description": " ","value": "©Axzi-X" , "required": true },
 
 "DETAILS": {"description": " ","value": "true" , "required": true },
 
@@ -52,11 +52,11 @@
 
 "D_EMOJI": {"description": " ","value": "🌀" , "required": true },
 
-"BOT_NAME": {"description": " ","value": "👸𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸" , "required": true },
+"BOT_NAME": {"description": " ","value": "©Axzi-X" , "required": true },
 
-"WELCOME_GIF": {"description": " ","value": "https://telegra.ph/file/dad5ef6acdf755b35bda1.mp4" , "required": true },
+"WELCOME_GIF": {"description": " ","value": "💯" , "required": true },
 
-"LOGO_WELCOME": {"description": " ","value": "https://telegra.ph/file/dad5ef6acdf755b35bda1.mp4" , "required": true },
+"LOGO_WELCOME": {"description": " ","value": "💯" , "required": true },
 
 "LOGO_BYE": {"description": " ","value": "https://telegra.ph/file/5850ee81491205afc2140.mp4" , "required": true },
 
@@ -126,9 +126,7 @@
 
 "HEROKU_APP_NAME": { "description": "","value": "" , "required": true},
 
-"ALIVE_STIC": {"description": " ","value": "https://i.ibb.co/XkWhjLh/Nt-OOzj-C3-HBAB.webp" , "required": true },
-
-"IMGBB": {"description": " ","value": "" , "required": false }
+"ALIVE_STIC": {"description": " ","value": "https://i.ibb.co/XkWhjLh/Nt-OOzj-C3-HBAB.webp" , "required": true }
 },
 "addons": [{
     "plan": "heroku-postgresql"
