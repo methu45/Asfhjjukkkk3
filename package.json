@@ -1,14 +1,14 @@
 {
-    "name": "DIANA-WA-Bot-MD",
-    "version": "1.0.0",
-    "description": "DIANA-MD project - a Whatsapp userbot helping to improve your Whatsapp experience.",
-    "main": "./DianaMD/index.js",
+    "name": "AXZI-RE",
+    "version": "1.0.1",
+    "description": "AXZI project - a Whatsapp userbot helping to improve your Whatsapp experience.",
+    "main": "./AxziRe/index.js",
     "scripts": {
-        "start": "supervisor -s fuckyou.js"
+        "start": "supervisor -s index.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/DIANA-wabot/DIANA-WA-Bot.git"
+        "url": "git+"
     },
     "keywords": [
         "whatsapp",
@@ -21,13 +21,13 @@
         "whatsapp web",
         "whatsapp api"
     ],
-    "author": "Yusuf",
-    "developer": "djdjdjdjejjd",
+    "author": "TenuhAx",
+    "developer": "TenuhAx",
     "license": "GPL-3.0-or-later",
     "bugs": {
-        "url": "https://github.com/DIANA-wabot/DIANA-WA-Bot.git"
+        "url": ""
     },
-    "homepage": "https://github.com/DIANA-wabot/DIANA-WA-Bot.git",
+    "homepage": "",
     "dependencies": {
         "@adiwajshing/baileys": "^4.1.0",
         "@adiwajshing/keyed-db": "^0.2.4",
