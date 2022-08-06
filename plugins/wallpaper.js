@@ -1266,5 +1266,5 @@ evt.getCMD({pattern: 'wallpaper$', fromMe: false, deleteCommand: false, desc: "g
       buttons: buttons,
       headerType: 4,
     };
-    await client.sendMessage(message.client.jid, buttonMessage);
+    await message.client.sendMessage(message.jid, buttonMessage);
   }));
