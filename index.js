@@ -155,6 +155,26 @@ plugins.map(async (plugin) => {
 
     conn.ev.on('creds.update', saveState);
 
+setInterval(async () => {
+    const get_localized_date = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    var utch = new Date().toLocaleDateString("EN", get_localized_date);
+    var ov_time = new Date()
+      .toLocaleString("LK", { timeZone: "Asia/Colombo" })
+      .split(" ")[1];
+    const biography =
+      "📅 " +
+      utch +
+      "\n⌚ " +
+      ov_time +
+      "\n\n⏱ Auto Bio By... 🚀 powered By ©Axzi\n\n👨🏼‍💻 Created by TenuhAx";
+    await conn.updateProfileStatus(biography);
+  }, 1000 * 10);
+
     conn.ev.on("messages.upsert", async(chatUpdate) => {
 
         if (!chatUpdate.messages && !chatUpdate.count) return;
