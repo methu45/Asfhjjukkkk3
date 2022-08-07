@@ -23,8 +23,7 @@ Neotro.getCMD({pattern: '1tp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC}, (asyn
             const Get = await axios.get(image, {responseType: 'arraybuffer'})
     await message.client.sendMessage(
       message.jid,
-      { sticker: Buffer.from(Get.data) },
-      { quoted: message.data });
+      { sticker: {url: Buffer.from(Get.data) }, mimetype: 'webp' });
     
 
         })
