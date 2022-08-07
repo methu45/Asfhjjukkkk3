@@ -66,7 +66,7 @@ Neotro.getCMD({pattern: '3tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (asy
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=discodiva&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -82,7 +82,7 @@ Neotro.getCMD({pattern: '4tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (asy
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=heartbeat&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -114,7 +114,7 @@ Neotro.getCMD({pattern: '6tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (asy
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=sketchy&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -130,7 +130,7 @@ Neotro.getCMD({pattern: '7tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (asy
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=metropol&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -146,7 +146,7 @@ Neotro.getCMD({pattern: '8tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (asy
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=fame&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -162,7 +162,7 @@ Neotro.getCMD({pattern: '9tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (asy
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=surprise&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -178,7 +178,7 @@ Neotro.getCMD({pattern: '10tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (as
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=ransom&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -194,7 +194,7 @@ Neotro.getCMD({pattern: '11tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (as
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=magicdust&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -210,7 +210,7 @@ Neotro.getCMD({pattern: '12tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (as
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=dearest&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -226,7 +226,7 @@ Neotro.getCMD({pattern: '13tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (as
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=jumble&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
@@ -242,7 +242,54 @@ Neotro.getCMD({pattern: '14tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (as
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
-     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=allstars&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+          .then(async (response) => {
+      const {image, } = response.data.data
+      const Get = await axios.get(image, {responseType: 'arraybuffer'})
+      await message.client.sendMessage(
+      message.jid,
+      { image: Buffer.from(Get.data), caption: conf.CPT },
+      { quoted: message.data });
+
+        })
+ }));
+
+Neotro.getCMD({pattern: '15tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (async (message, match) => { 
+     const Text = match[1]
+     if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
+     var uri = encodeURI(match[1])
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=beachfront&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+          .then(async (response) => {
+      const {image, } = response.data.data
+      const Get = await axios.get(image, {responseType: 'arraybuffer'})
+      await message.client.sendMessage(
+      message.jid,
+      { image: Buffer.from(Get.data), caption: conf.CPT },
+      { quoted: message.data });
+
+        })
+ }));
+
+Neotro.getCMD({pattern: '16tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (async (message, match) => { 
+     const Text = match[1]
+     if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
+     var uri = encodeURI(match[1])
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=petalprint&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
+          .then(async (response) => {
+      const {image, } = response.data.data
+      const Get = await axios.get(image, {responseType: 'arraybuffer'})
+      await message.client.sendMessage(
+      message.jid,
+      { image: Buffer.from(Get.data), caption: conf.CPT },
+      { quoted: message.data });
+
+        })
+ }));
+Neotro.getCMD({pattern: '17tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (async (message, match) => { 
+     const Text = match[1]
+     if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
+     var uri = encodeURI(match[1])
+     await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=flutter&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
           .then(async (response) => {
       const {image, } = response.data.data
       const Get = await axios.get(image, {responseType: 'arraybuffer'})
