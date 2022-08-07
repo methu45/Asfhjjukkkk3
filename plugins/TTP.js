@@ -29,9 +29,11 @@ Neotro.getCMD({pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC}, (asy
 
   }));
 
+//========================================================
+//========================================================
 
 
-Neotro.getCMD({pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC}, (async (message, match) => { 
+Neotro.getCMD({pattern: '1tp ?(.*)', fromMe: false, desc: Lang.TTP_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_WORDS}, { quoted: message.data });
     
     var uri = encodeURI(match[1])
@@ -44,7 +46,7 @@ Neotro.getCMD({pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC}, (async
 
   }));
 
-Neotro.getCMD({pattern: '1tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (async (message, match) => { 
+Neotro.getCMD({pattern: '2tp ?(.*)', fromMe: false, desc: BLang.ATTP_DESC}, (async (message, match) => { 
      const Text = match[1]
      if (match[1] === '') return await message.client.sendMessage(message.jid , { text:BLang.NEED_WORDS}, { quoted: message.data })
      var uri = encodeURI(match[1])
