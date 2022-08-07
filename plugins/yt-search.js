@@ -4,7 +4,7 @@ const Neotro = require("../events");
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
-Neotro.addCommand({pattern: 'yt ?(.*)', fromMe: false, desc: Lang.YT_DESC}, (async (message, match) => { 
+Neotro.getCMD({pattern: 'yt ?(.*)', fromMe: false, desc: Lang.YT_DESC}, (async (message, match) => { 
 
     if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_WORDS}, { quoted: message.data });
     
