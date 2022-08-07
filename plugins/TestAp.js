@@ -21,14 +21,14 @@ Neotro.getCMD({pattern: '1tp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC}, (asyn
             } = response.data.data
     
             const Get = await axios.get(image, {responseType: 'arraybuffer'})
-    
+    await message.client.sendMessage(
+      message.jid,
+      { image: Buffer.from(Get.data), caption: conf.CPT },
+      { quoted: message.data });
 
         })
         
         
-        await message.client.sendMessage(
-      message.jid,
-      { image: Buffer.from(Get.data), caption: conf.CPT },
-      { quoted: message.data });
+        
         
       }));
