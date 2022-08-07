@@ -11,7 +11,7 @@ Neotro.getCMD({pattern: '1tp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC}, (asyn
 
         const Text = match[1]
     
-        if (match1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_WORDS}, { quoted: message.data })
+        if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_WORDS}, { quoted: message.data })
         
         var uri = encodeURI(match[1])
         await axios.get(`https://open-apis-rest.up.railway.app/api/glowtext?text=${uri}&font_style=lollipop&font_size=m&glow_halo=1&non_trans=false&retina=true&anim_type=pulse`)
