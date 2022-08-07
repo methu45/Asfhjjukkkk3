@@ -45,7 +45,7 @@ var reply = await message.client.sendMessage(message.jid , { text:Lang.GETTING_V
         sections,
       };
 
-      await client.sendMessage(message.client.jid, listMessage);
+      await message.client.sendMessage(message.jid, listMessage);
       
   }));
 
