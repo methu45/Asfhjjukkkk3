@@ -25,7 +25,7 @@ const conf = require("../config");
     {
 	title: "Section 1",
 	rows: [
-	    {title: "OmniSoft TEXT TO IMAGE", rowId: ".wallpaper", description: "it make your Text As Beautufull Glow text"}
+	    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.wallpaper ${results}`, description: `it make your Text As Beautufull Glow text`}
 	]
     }
 
