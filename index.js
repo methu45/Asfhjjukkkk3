@@ -193,23 +193,36 @@ setInterval(async () => {
         }
 
         events.commands.map(
+
         async(command) => {
+            
+            
             if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
                     var text_msg = msg.message.imageMessage.caption;
+                
                 } else if (msg.message && msg.message.videoMessage && msg.message.videoMessage.caption) {
                     var text_msg = msg.message.videoMessage.caption;
+                
+                
                 }else if (msg.message && msg.message.buttonsResponseMessage && msg.message.buttonsResponseMessage.selectedButtonId ){
                     var text_msg = msg.message.buttonsResponseMessage.selectedButtonId;
+                
+                
                 }else if (msg.message && msg.message.templateButtonReplyMessage && msg.message.templateButtonReplyMessage.selectedId ){
                     var text_msg = msg.message.templateButtonReplyMessage.selectedId;
-                }else if (msg.message && msg.message.listResponseMessage && msg.message.listResponseMessage.selectedRowId ){
-                    var text_msg = msg.message.listResponseMessage.selectedRowId;
+               
+               
+                }else if (msg.message && msg.message.listResponseMessage && msg.message.listResponseMessage.singleSelectReply.selectedRowId ){
+                    var text_msg = msg.message.listResponseMessage.singleSelectReply.selectedRowId;
+                
+                
                 }else if (msg.message) {
                     var text_msg = msg.message.extendedTextMessage === null ? msg.message.conversation : msg.message.extendedTextMessage.text;
+                
+                
                 } else {
                     var text_msg = undefined;
-                }
-            if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo') && msg.message && msg.message.imageMessage !== null && (command.pattern === undefined || (command.pattern !== undefined && command.pattern.test(text_msg)))) || (command.pattern !== undefined && command.pattern.test(text_msg)) || (command.on !== undefined && command.on === 'text' && text_msg) || (command.on !== undefined && (command.on === 'video') && msg.message && msg.message.videoMessage !== null && (command.pattern === undefined || (command.pattern !== undefined && command.pattern.test(text_msg))))) {
+                }            if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo') && msg.message && msg.message.imageMessage !== null && (command.pattern === undefined || (command.pattern !== undefined && command.pattern.test(text_msg)))) || (command.pattern !== undefined && command.pattern.test(text_msg)) || (command.on !== undefined && command.on === 'text' && text_msg) || (command.on !== undefined && (command.on === 'video') && msg.message && msg.message.videoMessage !== null && (command.pattern === undefined || (command.pattern !== undefined && command.pattern.test(text_msg))))) {
 
                let sendMsg = false;
 
