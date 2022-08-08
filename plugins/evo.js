@@ -10,7 +10,7 @@
     {
 	title: "Section 1",
 	rows: [
-	    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.1tp results`, description: `it make your Text As Beautufull Glow text`}
+	    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.1tp ${results}`, description: `it make your Text As Beautufull Glow text`}
 	]
     }
 
