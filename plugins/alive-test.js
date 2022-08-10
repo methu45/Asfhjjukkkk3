@@ -31,7 +31,7 @@ let wk = config.WORKTYPE == 'public' ? false : true
         let views = arama[0].views;
         let author = arama[0].author.name;
         let url = arama[0].url
-        const msg = '*🔎SONG SEARCH RESULT*\n\nTitle▶▷ ' + title2 + '\nViews▶▷: ' + views + '\n 📹Author▶▶: ' + author + '\n🛸LINK: ' + url + '\n\n'
+        const msg = '*🔎SONG SEARCH RESULT*\n\n*🔴Title▶▷* ' + title2 + '\n*⚫Views▶▷* : ' + views + '\n🟣Author▶▷: ' + author + '\n🛸LINK: ' + url + '\n\n'
          
          var logo = await axios.get(thumbnail ,{responseType: 'arraybuffer'});
  
