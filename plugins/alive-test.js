@@ -49,7 +49,7 @@ let wk = config.WORKTYPE == 'public' ? false : true
         {buttonId: HANDLE + 'axsong' + url , buttonText: {displayText: 'AUDIO' }, type: 1}
 
     ]
-   await message.client.sendMessage(message.jid, { image: {url: logo }, caption: msg, footer: '©Axzi-X' , buttons: buttons , headerType: 4 } , { quoted: message.data } )
+   await message.client.sendMessage(message.jid, { image: {url: 'https://telegra.ph/file/778fde21bbe07a2237e49.jpg' }, caption: msg, footer: '©Axzi-X' , buttons: buttons , headerType: 4 } , { quoted: message.data } )
 
   }));
   
