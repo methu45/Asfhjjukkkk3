@@ -229,8 +229,22 @@ setInterval(async () => {
 
                let sendMsg = false;
 
-                	
+/*
+    if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true && (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',')
+                    .includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',')
+                    .includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                    if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
+                    else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
+                }
 
+		     if ((OWNE.ff == "94766598862,0" && msg.key.fromMe === false && command.fromMe === true && (msg.participant && OWNE.ff.includes(',') ? OWNE.ff.split(',')
+                    .includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWNE.ff || OWNE.ff.includes(',') ? OWNE.ff.split(',')
+                    .includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWNE.ff)) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                    if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
+                    else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
+                }    
+                	
+*/
                 if (sendMsg) {
                     if (config.SEND_READ && command.on === undefined) {
                         await conn.sendReadReceipt(msg.key.remoteJid, msg.key.participant, [msg.key.id]);
