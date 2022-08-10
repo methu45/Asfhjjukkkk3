@@ -24,20 +24,23 @@ const conf = require("../config");
      const sections = [
     {title: "©Axzi-X TEXT-TO-IMAGE",
 	rows: [
-    {title: ` TEXT `, rowId: `.1tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.2tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.3tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.4tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.5tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.6tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.7tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.8tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.9tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.10tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `.11tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `12tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `12tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `12tp ${results}`, description: `it make your Text As Beautufull Glow text`}
+    {title: `Normal TEXT⛵`, rowId: `.1tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `𝙻𝚘𝚕𝚕𝚢𝚙𝚘𝚙🍭`, rowId: `.2tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `💥𝙳𝚒𝚜𝚌𝚘𝚍𝚒𝚟𝚊`, rowId: `.3tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `𝙷𝚊𝚛𝚝 𝙱𝙴𝙰𝚃💕`, rowId: `.4tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `𝚂𝚔𝚎𝚝𝚌𝚑𝚢🪄`, rowId: `.5tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `🧤𝙵𝚊𝚖𝚎`, rowId: `.6tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `*️⃣𝙼𝚎𝚝𝚊𝚕𝚙𝚘𝚕`, rowId: `.7tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `👀𝚁𝚊𝚗𝚜𝚘𝚖`, rowId: `.8tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `🎁𝚂𝚞𝚛𝚙𝚛𝚒𝚌𝚎`, rowId: `.9tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `𝙳𝚎𝚊𝚛𝚎𝚜𝚝🧵`, rowId: `.10tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `✨𝙼𝚊𝚐𝚒𝚌 𝚍𝚞𝚜𝚝`, rowId: `.11tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `🎉𝚂𝚃𝙰𝚁𝚂`, rowId: `.12tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `🛸𝙹𝚞𝚖𝚋𝚕𝚎`, rowId: `.13tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `⏳𝙿𝚁𝚃𝙰𝙻 𝚙𝚛𝚒𝚗𝚝`, rowId: `.14tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `🏖️𝙱𝙴𝙰𝙲𝙷`, rowId: `.15tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `☀️𝚏𝚕𝚞𝚝𝚝𝚎𝚛`, rowId: `.16tp ${results}`, description: `It make Colourfull Text-Image (PNG)`},
+    {title: `🌑𝚖𝚎𝚝𝚛𝚘𝚙𝚘𝚕`, rowId: `.17tp ${results}`, description: `It make Colourfull Text-Image (PNG)`}
 	
 	]
     }
