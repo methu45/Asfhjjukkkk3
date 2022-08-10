@@ -22,10 +22,9 @@ const conf = require("../config");
      
      const results = (match[1]);
      const sections = [
-    {
-	title: "©Axzi-X TEXT-TO-IMAGE",
+    {title: "©Axzi-X TEXT-TO-IMAGE",
 	rows: [
-    {title: ` TEXT `, rowId: `.1tp ${results}`, description: `it make your Text As Beautufull Glow text`}
+    {title: ` TEXT `, rowId: `.1tp ${results}`, description: `it make your Text As Beautufull Glow text`},
     {title: `OmniSoft TEXT TO IMAGE`, rowId: `.2tp ${results}`, description: `it make your Text As Beautufull Glow text`},
     {title: `OmniSoft TEXT TO IMAGE`, rowId: `.3tp ${results}`, description: `it make your Text As Beautufull Glow text`},
     {title: `OmniSoft TEXT TO IMAGE`, rowId: `.4tp ${results}`, description: `it make your Text As Beautufull Glow text`},
@@ -38,7 +37,7 @@ const conf = require("../config");
     {title: `OmniSoft TEXT TO IMAGE`, rowId: `.11tp ${results}`, description: `it make your Text As Beautufull Glow text`},
     {title: `OmniSoft TEXT TO IMAGE`, rowId: `12tp ${results}`, description: `it make your Text As Beautufull Glow text`},
     {title: `OmniSoft TEXT TO IMAGE`, rowId: `12tp ${results}`, description: `it make your Text As Beautufull Glow text`},
-    {title: `OmniSoft TEXT TO IMAGE`, rowId: `12tp ${results}`, description: `it make your Text As Beautufull Glow text`},
+    {title: `OmniSoft TEXT TO IMAGE`, rowId: `12tp ${results}`, description: `it make your Text As Beautufull Glow text`}
 	
 	]
     }
