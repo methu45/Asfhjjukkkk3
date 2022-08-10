@@ -115,7 +115,7 @@ Axzi.getCMD({pattern: 'axsong ?(.*)', fromMe: wk, dontaddCommandList: true, dele
     let views = s3vid.videos[0].views;
     let author = s3vid.videos[0].author.name;
     let url = s3vid.videos[0].url;
-    let msg = '┌───[🐋𝙰𝚀𝚄𝙰𝙱𝙾𝚃🐋]\n\n  *📥VIDEO DOWNLODER*\n\n│📽️ᴠɪᴅᴇᴏ: ' + title + '\n\n│ 👀ᴠɪᴇᴡs: ' + views + '\n\n│ 📹 ᴄʜᴀɴɴᴇʟ: ' + author + '\n\n│🖇️ᴜʀʟ: ' + url + '\n\n└───────────◉'
+    let msg = '  *📥VIDEO DOWNLODER*\n\n│📽️ᴠɪᴅᴇᴏ: ' + title + '\n\n│ 👀ᴠɪᴇᴡs: ' + views + '\n\n│ 📹 ᴄʜᴀɴɴᴇʟ: ' + author + '\n\n│🖇️ᴜʀʟ: ' + url + '\n\n'
     var logo = await axios.get(thumbnail ,{responseType: 'arraybuffer'});
  
     var PIC = Buffer.from(logo.data)
@@ -183,8 +183,8 @@ Axzi.getCMD({pattern: 'yt ?(.*)', fromMe: wk, desc: Lang.YT_DESC, deleteCommand:
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text, {quoted: message.data}); 
 var vsn = ''
-if (config.LANG == 'EN')  vsn = '*🧜‍♀️ Use  .video / .song commands to download videos or songs. 🧜‍♂️*'
-if (config.LANG == 'SI')  vsn = '*🧜‍♀️ වීඩියෝ හෝ ගීත ලබා ගැනීම සදහා .video .song යන විධාන භාවිත කරන්න. 🧜‍♂️*'
+if (config.LANG == 'EN')  vsn = '* Use  .video / .song commands to download videos or songs. *'
+if (config.LANG == 'SI')  vsn = '* වීඩියෝ හෝ ගීත ලබා ගැනීම සදහා .video .song යන විධාන භාවිත කරන්න. *'
  
 if (match[1].includes('https://youtu')) return await message.client.sendMessage(message.jid,vsn,MessageType.text, {quoted: message.data}); 
         var reply = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text, {quoted: message.data});
