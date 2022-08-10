@@ -21,9 +21,10 @@ evt.getCMD({pattern: 'aliveimage$', fromMe: false, deleteCommand: false, desc: "
 }));
 
 evt.getCMD({pattern: 'alivetext$', fromMe: false, deleteCommand: false, desc: "get songs froom youtube"}, (async (message, match) => {
-   var alivemsg = '```👋 Hey there, I\'m alive now``` \n\n_Version:_ ```' + config.VERSION + '```\n\n©Axzi-X'
+   var alivemsg = '
+```👋 Hey there, I\'m alive now``` \n\n_Version:_ ```' + config.VERSION + '```\n\n©Axzi
+'
 		
-
  await message.client.sendMessage(message.jid, { text: alivemsg } , { quoted: message.data } )
 
 }));
