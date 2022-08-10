@@ -29,14 +29,14 @@ evt.getCMD({pattern: 'start$', fromMe: false, deleteCommand: false, desc: "get s
 }));
 
 evt.getCMD({pattern: 'Amenu$', fromMe: false, deleteCommand: false, desc: "get songs froom youtube"}, (async (message, match) => {
-   var menu = ''
+   var menu = 'soon it possible'
 
  await message.client.sendMessage(message.jid, { image: {url: 'https://telegra.ph/file/8086c81d1d79f63c7cc73.jpg' }, caption: menu  } , { quoted: message.data } )
 
 }));
 
 evt.getCMD({pattern: 'info$', fromMe: false, deleteCommand: false, desc: "get songs froom youtube"}, (async (message, match) => {
-   var alivemsg = ''
+   var alivemsg = '🔗'
 		
  await message.client.sendMessage(message.jid, { text: alivemsg } , { quoted: message.data } )
 
