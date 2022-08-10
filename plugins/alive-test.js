@@ -17,7 +17,7 @@ let wk = config.WORKTYPE == 'public' ? false : true
 
 
 
- Axzi.getCMD({pattern: 'song ?(.*)', fromMe: wk, desc: Lang.SONG_DESC, deleteCommand: false}, (async (message, match) => {
+ Axzi.getCMD({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC, deleteCommand: false}, (async (message, match) => {
 
         if (match[1] === '') return
         await message.client.sendMessage(message.jid , { text:Lang.NEED_TEXT_SONG}, { quoted: message.data });
