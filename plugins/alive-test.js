@@ -37,7 +37,7 @@ let wk = config.WORKTYPE == 'public' ? false : true
  
     var PIC = Buffer.from(logo.data)
     const dot = config.HANDLERS
-    const media = await message.client.prepareMessage(message.jid,{ image: {url: PIC }, quoted: message.data } )
+    
     var HANDLE = '';
     if (/\[(\W*)\]/.test(dot)) {
         HANDLE = dot.match(/\[(\W*)\]/)[1][0];
@@ -49,7 +49,7 @@ let wk = config.WORKTYPE == 'public' ? false : true
         {buttonId: HANDLE + 'axsong' + url , buttonText: {displayText: 'AUDIO' }, type: 1}
 
     ]
-   await message.client.sendMessage(message.jid, { image: {url: media }, caption: msg, footer: '©Axzi-X' , buttons: buttons , headerType: 4 } , { quoted: message.data } )
+   await message.client.sendMessage(message.jid, { image: {url: PIC }, caption: msg, footer: '©Axzi-X' , buttons: buttons , headerType: 4 } , { quoted: message.data } )
 
   }));
   
