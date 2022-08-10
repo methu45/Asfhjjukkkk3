@@ -76,6 +76,7 @@
         "system-sleep": "^1.3.7" ,
         "bot-kaviyaah": "1.0.0",
         "async-g-i-s": "1.0.0",
-        "supervisor": "^0.12.0"
+        "supervisor": "^0.12.0",
+        "ytdl-core": "^4.9.1"
     }
 }
