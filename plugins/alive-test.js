@@ -19,12 +19,10 @@ let wk = config.WORKTYPE == 'public' ? false : true
 
  Axzi.getCMD({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC, deleteCommand: false}, (async (message, match) => {
 
-        if (match[1] === '') return
-        await message.client.sendMessage(message.jid , { text:Lang.NEED_TEXT_SONG}, { quoted: message.data });
+        if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_TEXT_SONG}, { quoted: message.data });
         let arama = await yts(match[1]);
         arama = arama.all;
-        if(arama.length < 1) return 
-        await message.client.sendMessage(message.jid , { text:Lang.NO_RESULT}, { quoted: message.data });
+        if(arama.length < 1) return await message.client.sendMessage(message.jid , { text:Lang.NO_RESULT}, { quoted: message.data });
         
         
         let thumbnail = arama[0].thumbnail;
