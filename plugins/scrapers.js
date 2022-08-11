@@ -129,7 +129,7 @@ Axzi.getCMD({pattern: 'vid720 ?(.*)', fromMe: wk, dontaddCommandList: true, dele
  const vid = await axios.get(data.url , {responseType: 'arraybuffer'} )
   var up = await message.client.sendMessage(message.jid , { text: 'Uploading'}, { quoted: message.data });
   
- await message.client.sendMessage(message.jid, { video: {url: data.url }, caption: msg }, { quoted: message.data } )
+ await message.client.sendMessage(message.jid, { video: {url: data.url }, caption: config.CPT }, { quoted: message.data } )
     
         
         
