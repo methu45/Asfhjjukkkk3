@@ -57,7 +57,7 @@ let wk = config.WORKTYPE == 'public' ? false : true
   
 Axzi.getCMD({pattern: 'axdsong ?(.*)', fromMe: false, dontaddCommandList: true, deleteCommand: false}, (async (message, match) => { 
         
-     if (!match[1].includes('youtu')) return await message.client.sendMessage(message.jid , { text:Lang.NEED_VIDEO}, { quoted: message.data });
+     if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_VIDEO}, { quoted: message.data });
 
         
     var load = await message.client.sendMessage(message.jid , { text:config.DOWNLOAD_TEXT}, { quoted: message.data });
