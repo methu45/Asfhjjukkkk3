@@ -88,7 +88,7 @@ Axzi.getCMD({pattern: 'axsong ?(.*)', fromMe: false, desc: Lang.SONG_DESC, delet
     }));
 
 
-Axzi.getCMD({pattern: 'video ?(.*)', fromMe: wk, desc: Lang.VIDEO_DESC, deleteCommand: false }, (async (message, match) => {
+Axzi.getCMD({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC, deleteCommand: false }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_VIDEO}, { quoted: message.data });
 
