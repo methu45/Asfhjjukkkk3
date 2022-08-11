@@ -9,8 +9,8 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
    Neotro.getCMD({pattern: 'get ?(.*)', fromMe: false, desc: 'movie zong' }, (async (message, match) => {
    
-    var webimage = await axios.get(`https://dl.techwizardent.com/496320`, { responseType: 'arraybuffer' })
+    var webimage = `https://dl.techwizardent.com/496320`
 
-    await message.client.sendMessage(message.jid,{ document : { url : webimage.data  } , mimetype : 'mp4' , fileName : 'slmoviezone.mp4' }, {quoted: message.data})
+    await message.client.sendMessage(message.jid,{ document : { url : webimage } , mimetype : 'mp4' , fileName : 'slmoviezone.mp4' }, {quoted: message.data})
     
     }));    
