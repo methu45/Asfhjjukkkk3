@@ -122,17 +122,14 @@ Axzi.getCMD({pattern: 'video ?(.*)', fromMe: wk, desc: Lang.VIDEO_DESC, deleteCo
    await message.client.sendMessage(message.jid, { image: {url: thumbnail }, caption: msg, footer: '©Axzi-X' , buttons: buttons , headerType: 4 } , { quoted: message.data } )
     }));
 
-Axzi.getCMD({pattern: 'v7 ?(.*)', fromMe: false, dontaddCommandList: true, deleteCommand: false}, (async (message, match) => {
+Axzi.getCMD({pattern: 'vid720 ?(.*)', fromMe: wk, dontaddCommandList: true, deleteCommand: false}, (async (message, match) => {
  const data = await yt720(match[1])
  if (data.status == true) {
- var load = await message.client.sendMessage(message.jid,config.VIDEO_DOWN,MessageType.text, {quoted: message.data});
- 
- 
+ var load =  await message.client.sendMessage(message.jid , { text: '📽️Downloading'}, { quoted: message.data });
  const vid = await axios.get(data.url , {responseType: 'arraybuffer'} )
-  var up = await message.client.sendMessage(message.jid,config.VIDEO_UP,MessageType.text, {quoted: message.data});
+  var up = await message.client.sendMessage(message.jid , { text: 'Uploading'}, { quoted: message.data });
   
-  
-   await message.client.sendMessage(message.jid,{ video : { url : data.url, caption : config.CPT  }, quoted: message.data})
+await message.client.sendMessage(message.jid,{ video : { url : data.url, caption : config.CPT  }, quoted: message.data})
         
         
         
