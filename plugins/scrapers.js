@@ -86,3 +86,39 @@ Axzi.getCMD({pattern: 'axsong ?(.*)', fromMe: false, desc: Lang.SONG_DESC, delet
                  
         await message.client.sendMessage(message.jid,{ audio : { url : stream.mp3  } , mimetype : 'audio/mp4' , quoted: message.data})
     }));
+
+
+Axzi.getCMD({pattern: 'video ?(.*)', fromMe: wk, desc: Lang.VIDEO_DESC, deleteCommand: false }, (async (message, match) => {
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_VIDEO}, { quoted: message.data });
+
+        
+    var svid = match[1].replace("shorts/","watch?v=")
+    var s2vid = svid.replace("?feature=share","")
+    var s3vid = await yts(s2vid);
+    let thumbnail = s3vid.videos[0].thumbnail;
+    var s4vid = s3vid.videos[0].url;
+    let title = s3vid.videos[0].title;
+    let views = s3vid.videos[0].views;
+    let author = s3vid.videos[0].author.name;
+    let url = s3vid.videos[0].url;
+    let msg = '*VIDEO DOWNLOAD RESULT🔎*\n\n ️*⚫TITLE* : ' + title + '\n*🟣ViIEWS * : '  + views + '\n*🔴AUTHOR* : ' + author + '\n*🛸LINK* : ' + url + '\n'
+    var logo = await axios.get(thumbnail ,{responseType: 'arraybuffer'});
+ 
+    var PIC = Buffer.from(logo.data)
+    const dot = config.HANDLERS
+   var HANDLE = '';
+    if (/\[(\W*)\]/.test(dot)) {
+        HANDLE = dot.match(/\[(\W*)\]/)[1][0];
+    } else {
+        HANDLE = '.';
+    }
+   const buttons = [
+        {buttonId: HANDLE + 'a' + s2vid , buttonText: {displayText: '📽️720P' }, type: 1},
+        {buttonId: HANDLE + 'b' + s2vid , buttonText: {displayText: '📽️480P' }, type: 1},
+        {buttonId: HANDLE + 'c' + s2vid , buttonText: {displayText: '📽360p' }, type: 1}
+
+    ]
+   await message.client.sendMessage(message.jid, { image: {url: thumbnail }, caption: msg, footer: '©Axzi-X' , buttons: buttons , headerType: 4 } , { quoted: message.data } )
+    }));
+
