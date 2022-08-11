@@ -19,13 +19,13 @@ let wk = config.WORKTYPE == 'public' ? false : true
 
  Axzi.getCMD({pattern: 'dsong ?(.*)', fromMe: false, desc: Lang.SONG_DESC, deleteCommand: false}, (async (message, match) => {
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_TEXT_SONG}, { quoted: message.data });
+        if (match[1] === '') return await message.client.sendMessage(message.jid , { text:Lang.NEED_TEXT_SONG}, { quoted: message.data })
         
-  var load = await message.client.sendMessage(message.jid , { text:config.DOWNLOAD_TEXT}, { quoted: message.data });
+        var load = await message.client.sendMessage(message.jid , { text:config.DOWNLOAD_TEXT}, { quoted: message.data })
 
       
-        let stream = await ytmp3(match[1]);
-        const song = await axios.get(stream.mp3 ,{responseType: 'arraybuffer'});
+        let stream = await ytmp3(match[1])
+        const song = await axios.get(stream.mp3 ,{responseType: 'arraybuffer'})
         const aws = Buffer.from(song.data)
         const title = stream.title
         var up =  await message.client.sendMessage(message.jid , { text:config.UPLOAD_TEXT}, { quoted: message.data });
