@@ -16,7 +16,7 @@ const Lang = Language.getString('scrapers');
      results.all.map((video) => {
      let obj = {
      title: video.title,
-     rowId: `.ttp`,
+     rowId: `.v360 ${video.videoID}`,
      description: video.description,
         };
      rows.push(obj);
