@@ -114,15 +114,15 @@ Axzi.getCMD({pattern: 'video ?(.*)', fromMe: wk, desc: Lang.VIDEO_DESC, deleteCo
         HANDLE = '.';
     }
    const buttons = [
-        {buttonId: HANDLE + 'a' + s2vid , buttonText: {displayText: '📽️720P' }, type: 1},
-        {buttonId: HANDLE + 'b' + s2vid , buttonText: {displayText: '📽️480P' }, type: 1},
-        {buttonId: HANDLE + 'c' + s2vid , buttonText: {displayText: '📽360p' }, type: 1}
+        {buttonId: HANDLE + 'v720' + s2vid , buttonText: {displayText: '📽️720P' }, type: 1},
+        {buttonId: HANDLE + 'v360' + s2vid , buttonText: {displayText: '📽️480P' }, type: 1},
+        {buttonId: HANDLE + 'v360' + s2vid , buttonText: {displayText: '📽360p' }, type: 1}
 
     ]
    await message.client.sendMessage(message.jid, { image: {url: thumbnail }, caption: msg, footer: '©Axzi-X' , buttons: buttons , headerType: 4 } , { quoted: message.data } )
     }));
 
-Axzi.getCMD({pattern: 'vid720 ?(.*)', fromMe: wk, dontaddCommandList: true, deleteCommand: false}, (async (message, match) => {
+Axzi.getCMD({pattern: 'v720 ?(.*)', fromMe: false, dontaddCommandList: true, deleteCommand: false}, (async (message, match) => {
  const data = await yt720(match[1])
  if (data.status == true) {
  var load =  await message.client.sendMessage(message.jid , { text: '📽️Downloading'}, { quoted: message.data });
@@ -130,9 +130,18 @@ Axzi.getCMD({pattern: 'vid720 ?(.*)', fromMe: wk, dontaddCommandList: true, dele
   var up = await message.client.sendMessage(message.jid , { text: 'Uploading'}, { quoted: message.data });
   
  await message.client.sendMessage(message.jid, { video: {url: data.url }, caption: config.CPT }, { quoted: message.data } )
-    
-        
-        
+   
+ }
+}));
+
+Axzi.getCMD({pattern: 'v360 ?(.*)', fromMe: false, dontaddCommandList: true, deleteCommand: false}, (async (message, match) => {
+ const data = await yt360(match[1])
+ if (data.status == true) {
+ var load =  await message.client.sendMessage(message.jid , { text: '📽️Downloading'}, { quoted: message.data });
+ const vid = await axios.get(data.url , {responseType: 'arraybuffer'} )
+  var up = await message.client.sendMessage(message.jid , { text: 'Uploading'}, { quoted: message.data });
+  
+ await message.client.sendMessage(message.jid, { video: {url: data.url }, caption: config.CPT }, { quoted: message.data } )       
         
  }
 }));
