@@ -4,7 +4,7 @@ const config = require('../config');
 evt.getCMD({pattern: 'start$', fromMe: false, deleteCommand: false, desc: "get songs froom youtube"}, (async (message, match) => {
 
  if (config.ALIVEMSG == 'default') {
-   var alivemsg = '*⚡AXZI VERSION 1.0*/n/n*💫🧚‍♀️Hey There Im Alive Now*/n/n*◉Version :► ' + config.VERSION + ' (Public Release)*/n*◉Branch  :► Awsh*/n*◉About :► Axzi Is a Powerfull Bot For Whatsapp powered By HatzuHole🛸.*/n/n*✨Join  Our  News  And  Update group*'
+   var alivemsg = '*⚡AXZI VERSION 1.0*\n\n*💫🧚‍♀️Hey There Im Alive Now*\n\n*◉Version :► ' + config.VERSION + ' (Public Release)*\n*◉Branch  :► Awsh*\n*◉About :► Axzi Is a Powerfull Bot For Whatsapp powered By HatzuHole🛸.*\n\n*✨Join  Our  News  And  Update group*'
 		
     const alivebuttond = [
     {buttonId: '.Amenu',  buttonText: {displayText: '🤖MENU'}, type: 1},
