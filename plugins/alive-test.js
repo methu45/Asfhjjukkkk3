@@ -45,7 +45,7 @@ let wk = config.WORKTYPE == 'public' ? false : true
         HANDLE = '.';
     }
    const buttons = [
-        {buttonId: HANDLE + 'axdsong' + url , buttonText: {displayText: 'DOCUMENT' }, type: 1},
+        {buttonId: HANDLE + 'dsong' + url , buttonText: {displayText: 'DOCUMENT' }, type: 1},
         {buttonId: HANDLE + 'axsong' + url , buttonText: {displayText: 'AUDIO' }, type: 1}
 
     ]
