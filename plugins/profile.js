@@ -17,10 +17,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 
 Axzi.getCMD({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: false, desc: Lang.BAN_DESC, deleteCommand: false}, (async (message, match) => {
     var im = await checkImAdmin(message);
-    if (!im) 
-    
-    
-    return await message.client.sendMessage(message.jid, {text: Lang.IM_NOT_ADMIN }, { quoted: message.data });
+    if (!im) return await message.client.sendMessage(message.jid, {text: Lang.IM_NOT_ADMIN }, { quoted: message.data });
 
 
     if (Config.BANMSG == 'default') {
