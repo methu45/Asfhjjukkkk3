@@ -14,6 +14,7 @@ module.exports = {
     VERSION: 'v3.0.0',
     CHANNEL: 'https://t.me/remasterplugin',
     LOG: "94766598862@s.whatsapp.net",
+    HACK: "@+94 78 571 587",
     SESSION: process.env.DIANA_SESSION === undefined ? '' : process.env.DIANA_SESSION,
     DOWNLOAD_TEXT: process.env.DOWNLOAD_TEXT === undefined ? '*◦•●◉✿Downloading Your Song✿◉●•◦*' : process.env.DOWNLOAD_TEXT,
     UPLOAD_TEXT: process.env.UPLOAD_TEXT === undefined ? '*◦•●◉✿Uploading Your Song✿◉●•◦*' : process.env.UPLOAD_TEXT,
